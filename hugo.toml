@@ -1,4 +1,4 @@
-baseURL = "https://your-site.pages.dev"
+baseURL = "https://jra-blog.pages.dev"
 languageCode = "ja"
 title = "JRA重賞予想ブログ"
 theme = "PaperMod"
