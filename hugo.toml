@@ -1,6 +1,6 @@
 baseURL = "https://aikeiba.vvil.jp"
 languageCode = "ja"
-title = "JRA重賞予想ブログ"
+title = "AI競馬予想 | aikeiba"
 theme = "PaperMod"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
@@ -10,7 +10,7 @@ hasCJKLanguage = true
 
 [params]
   author = "りょうま"
-  description = "毎週金曜日に自動生成されるJRA重賞レース予想ブログ"
+  description = "AIが毎週自動生成するJRA重賞予想。G1・G2・G3の全重賞をデータ分析でカバー。"
   defaultTheme = "auto"
   DateFormat = "2006年1月2日"
   ShowReadingTime = true
@@ -20,7 +20,7 @@ hasCJKLanguage = true
   ShowCodeCopyButtons = true
   ShowRssButtonInSectionTermList = true
   ShowToc = true
-  homeInfoParams = { Title = "🏇 JRA重賞予想ブログ", Content = "毎週金曜日、AIが土日の重賞レースを自動予想。G1・G2・G3の全重賞をカバーします。" }
+  homeInfoParams = { Title = "🤖 AI競馬予想 — aikeiba", Content = "毎週金曜日、AIが今週末の重賞レースを自動分析・予想。G1・G2・G3の全重賞をカバー。データと過去傾向をもとに本命・対抗・買い目まで提示します。" }
 
   [params.assets]
     favicon = "/images/favicon.ico"
