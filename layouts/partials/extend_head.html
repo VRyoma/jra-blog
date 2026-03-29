@@ -1,0 +1,6 @@
+{{- /* AdSense自動広告スクリプト */ -}}
+{{- with site.Params.ads.adsenseClientId }}
+{{- if site.Params.ads.enableAutoAds }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{- end }}
+{{- end }}

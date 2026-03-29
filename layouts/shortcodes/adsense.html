@@ -1,0 +1,9 @@
+{{- /* AdSenseショートコード: 記事本文中に {{< adsense >}} で挿入 */ -}}
+{{- $slot := .Get "slot" | default "" -}}
+{{- if $slot }}
+{{ partial "ad_unit.html" (dict "slot" $slot "context" .) }}
+{{- else }}
+{{- with site.Params.ads.slots.articleMiddle }}
+{{ partial "ad_unit.html" (dict "slot" . "context" $) }}
+{{- end }}
+{{- end }}

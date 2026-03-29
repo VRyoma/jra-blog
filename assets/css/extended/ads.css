@@ -1,0 +1,75 @@
+/* --- 広告コンテナ --- */
+.ad-container {
+    text-align: center;
+    min-height: 90px;
+    margin: 1rem auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ad-slot-header {
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.ad-slot-footer {
+    max-width: var(--main-width);
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.ad-slot-article-top,
+.ad-slot-article-middle {
+    margin: 1.5rem 0;
+}
+
+.ad-slot-article-bottom {
+    margin: 2rem 0;
+}
+
+/* --- Amazonアフィリエイトウィジェット --- */
+.amazon-widget {
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    background: var(--entry);
+}
+
+.amazon-widget-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0 0 0.75rem;
+    color: var(--primary);
+}
+
+.amazon-widget-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amazon-widget-links li {
+    padding: 0.35rem 0;
+}
+
+.amazon-widget-links a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.amazon-widget-links a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+    .ad-slot-header,
+    .ad-slot-footer {
+        padding: 0.25rem 0.5rem;
+    }
+}

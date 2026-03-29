@@ -1,0 +1,13 @@
+{{- /* AdSense広告ユニット（再利用可能パーシャル） */ -}}
+{{- /* 使い方: {{ partial "ad_unit.html" (dict "slot" "1234567890") }} */ -}}
+{{- with site.Params.ads.adsenseClientId }}
+{{- with $.slot }}
+<ins class="adsbygoogle ad-container"
+     style="display:block"
+     data-ad-client="{{ $.context.Site.Params.ads.adsenseClientId }}"
+     data-ad-slot="{{ . }}"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{{- end }}
+{{- end }}

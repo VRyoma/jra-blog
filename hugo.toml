@@ -25,6 +25,23 @@ hasCJKLanguage = true
   [params.assets]
     favicon = "/images/favicon.ico"
 
+  # --- 広告設定 ---
+  [params.ads]
+    adsenseClientId = "ca-pub-3792720807195478"
+    enableAutoAds = true  # AdSense 自動広告
+
+    [params.ads.slots]
+      headerBelow = ""      # ヘッダー下広告スロット（例: 1234567890）
+      articleTop = ""       # 記事上部広告スロット
+      articleMiddle = ""    # 記事中央広告スロット
+      articleBottom = ""    # 記事下広告スロット
+      footerAbove = ""      # フッター上広告スロット
+      sidebar = ""          # サイドバー広告スロット
+
+    [params.ads.amazon]
+      associateTag = "vviljp-22"  # AmazonアソシエイトID
+      enabled = true
+
 [menu]
   [[menu.main]]
     identifier = "home"

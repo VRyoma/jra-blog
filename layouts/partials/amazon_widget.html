@@ -1,0 +1,15 @@
+{{- /* Amazonアフィリエイトウィジェット */ -}}
+{{- with site.Params.ads.amazon }}
+{{- if .enabled }}
+<div class="amazon-widget ad-container">
+  <div class="amazon-widget-inner">
+    <p class="amazon-widget-title">おすすめの競馬本</p>
+    <ul class="amazon-widget-links">
+      <li><a href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E4%BA%88%E6%83%B3&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">競馬予想の本を探す (Amazon)</a></li>
+      <li><a href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E3%83%87%E3%83%BC%E3%82%BF&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">競馬データ分析の本を探す (Amazon)</a></li>
+      <li><a href="https://www.amazon.co.jp/s?k=JRA&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">JRA関連グッズを探す (Amazon)</a></li>
+    </ul>
+  </div>
+</div>
+{{- end }}
+{{- end }}
