@@ -1,14 +1,29 @@
-{{- /* Amazonアフィリエイトウィジェット */ -}}
+{{- /* Amazonアフィリエイトウィジェット（商品サムネイル付き） */ -}}
 {{- with site.Params.ads.amazon }}
 {{- if .enabled }}
+{{- $tag := .associateTag }}
 <div class="amazon-widget ad-container">
-  <div class="amazon-widget-inner">
-    <p class="amazon-widget-title">おすすめの競馬本</p>
-    <ul class="amazon-widget-links">
-      <li><a href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E4%BA%88%E6%83%B3&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">競馬予想の本を探す (Amazon)</a></li>
-      <li><a href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E3%83%87%E3%83%BC%E3%82%BF&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">競馬データ分析の本を探す (Amazon)</a></li>
-      <li><a href="https://www.amazon.co.jp/s?k=JRA&tag={{ .associateTag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">JRA関連グッズを探す (Amazon)</a></li>
-    </ul>
+  <p class="amazon-widget-title">おすすめの競馬本</p>
+  <div class="amazon-product-cards">
+    <a class="amazon-product-card" href="https://www.amazon.co.jp/dp/458413828X?tag={{ $tag }}&linkCode=osi&th=1&psc=1" rel="noopener noreferrer" target="_blank">
+      <img src="https://images-na.ssl-images-amazon.com/images/P/458413828X.09._SL160_.jpg" alt="競馬予想の書籍" loading="lazy" width="113" height="160">
+      <span class="amazon-product-title">競馬の予想に役立つ本</span>
+      <span class="amazon-product-price">Amazonで見る</span>
+    </a>
+    <a class="amazon-product-card" href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E4%BA%88%E6%83%B3+%E3%83%87%E3%83%BC%E3%82%BF&tag={{ $tag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">
+      <div class="amazon-product-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
+      <span class="amazon-product-title">競馬データ分析の本</span>
+      <span class="amazon-product-price">Amazonで探す</span>
+    </a>
+    <a class="amazon-product-card" href="https://www.amazon.co.jp/s?k=%E7%AB%B6%E9%A6%AC+%E7%99%BA%E5%A3%B2%E6%A4%9C%E5%AE%9A&tag={{ $tag }}&ref=nb_sb_noss" rel="noopener noreferrer" target="_blank">
+      <div class="amazon-product-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <span class="amazon-product-title">競馬 発売検定</span>
+      <span class="amazon-product-price">Amazonで探す</span>
+    </a>
   </div>
 </div>
 {{- end }}
