@@ -41,7 +41,11 @@
     font-weight: 700;
     font-size: 0.95rem;
     margin: 0 0 0.75rem;
-    color: var(--primary);
+    color: var(--color-turf);
+}
+
+[data-theme="dark"] .amazon-widget-title {
+    color: #4caf50;
 }
 
 .amazon-widget-links {
@@ -55,15 +59,23 @@
 }
 
 .amazon-widget-links a {
-    color: var(--secondary);
+    color: var(--color-turf);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s;
 }
 
 .amazon-widget-links a:hover {
-    color: var(--primary);
+    color: var(--color-accent);
     text-decoration: underline;
+}
+
+[data-theme="dark"] .amazon-widget-links a {
+    color: #4caf50;
+}
+
+[data-theme="dark"] .amazon-widget-links a:hover {
+    color: #66bb6a;
 }
 
 /* --- レスポンシブ対応 --- */

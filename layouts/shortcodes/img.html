@@ -1,0 +1,12 @@
+{{- /* 画像ショートコード */ -}}
+{{- /* 使い方: {{< img src="images/race.jpg" alt="レース画像" caption="〇〇ステークス" >}} */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+<figure class="article-image{{ with $class }} {{ . }}{{ end }}">
+  <img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- if $caption }}
+  <figcaption>{{ $caption }}</figcaption>
+  {{- end }}
+</figure>

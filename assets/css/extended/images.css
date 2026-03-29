@@ -1,0 +1,33 @@
+/* === 画像スタイリングCSS === */
+
+/* --- 記事内画像 --- */
+.article-image {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-image figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+/* --- カバー画像 --- */
+.entry-cover {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.entry-cover img {
+    width: 100%;
+    height: auto;
+}

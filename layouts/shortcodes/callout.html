@@ -1,0 +1,11 @@
+{{- /* コールアウトショートコード */ -}}
+{{- /* 使い方: {{< callout type="win" title="本命" >}}内容{{< /callout >}} */ -}}
+{{- /* type: win（本命/緑）, place（対抗/金）, dark（穴/赤）, info（情報/青） */ -}}
+{{- $type := .Get "type" | default "info" -}}
+{{- $title := .Get "title" | default "" -}}
+<div class="callout callout-{{ $type }}">
+  {{- if $title }}
+  <p class="callout-title">{{ $title }}</p>
+  {{- end }}
+  <p>{{ .Inner | markdownify }}</p>
+</div>

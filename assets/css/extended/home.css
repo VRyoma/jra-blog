@@ -1,0 +1,120 @@
+/* === トップページCSS === */
+
+/* --- ヒーローセクション --- */
+.hero {
+    background: linear-gradient(135deg, #0d6832 0%, #1a8f4e 50%, #0a5a2a 100%);
+    color: #fff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--color-gold);
+    margin-bottom: 2rem;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0 0 1.25rem;
+    line-height: 1.6;
+}
+
+.hero-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.hero-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--color-gold);
+    transform: translateY(-1px);
+}
+
+/* --- 最新予想セクション --- */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 1.5rem;
+    padding-left: 0.8rem;
+    border-left: 4px solid var(--color-turf);
+}
+
+[data-theme="dark"] .section-title {
+    border-left-color: #4caf50;
+}
+
+.featured-section {
+    margin-top: 0.5rem;
+}
+
+/* --- 記事カード改善 --- */
+.first-entry {
+    border: 2px solid var(--color-turf);
+    position: relative;
+}
+
+.first-entry .entry-header h2 {
+    color: var(--color-turf);
+    font-size: 1.5rem;
+}
+
+[data-theme="dark"] .first-entry {
+    border-color: #4caf50;
+}
+
+[data-theme="dark"] .first-entry .entry-header h2 {
+    color: #4caf50;
+}
+
+.post-entry {
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.post-entry:hover {
+    border-color: var(--color-turf);
+    box-shadow: 0 2px 12px rgba(13, 104, 50, 0.1);
+}
+
+[data-theme="dark"] .post-entry:hover {
+    border-color: #4caf50;
+    box-shadow: 0 2px 12px rgba(76, 175, 80, 0.1);
+}
+
+/* --- モバイル対応 --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+}

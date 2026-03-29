@@ -1,0 +1,152 @@
+/* === 記事デザインCSS === */
+
+/* --- タイポグラフィ改善 --- */
+.post-content {
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+}
+
+.post-content p {
+    margin-bottom: 1.3rem;
+}
+
+/* --- テーブルデザイン（競馬予想テーブル用） --- */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.post-content thead {
+    background: var(--color-turf);
+    color: #fff;
+}
+
+.post-content thead th {
+    padding: 0.7rem 0.6rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.post-content tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+}
+
+.post-content tbody tr:hover {
+    background: var(--color-turf-light);
+}
+
+.post-content tbody td {
+    padding: 0.6rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+[data-theme="dark"] .post-content thead {
+    background: #1b5e20;
+}
+
+[data-theme="dark"] .post-content tbody tr:hover {
+    background: rgba(76, 175, 80, 0.08);
+}
+
+/* --- コールアウトボックス --- */
+.callout {
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    border-left: 4px solid;
+    font-size: 0.95rem;
+}
+
+.callout p {
+    margin: 0;
+}
+
+.callout-title {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.callout-win {
+    background: #e8f5e9;
+    border-left-color: var(--color-turf);
+}
+
+.callout-win .callout-title {
+    color: var(--color-turf);
+}
+
+.callout-place {
+    background: var(--color-gold-light);
+    border-left-color: var(--color-gold);
+}
+
+.callout-place .callout-title {
+    color: #b8860b;
+}
+
+.callout-dark {
+    background: #fce4ec;
+    border-left-color: var(--color-danger);
+}
+
+.callout-dark .callout-title {
+    color: var(--color-danger);
+}
+
+.callout-info {
+    background: #e3f2fd;
+    border-left-color: var(--color-info);
+}
+
+.callout-info .callout-title {
+    color: var(--color-info);
+}
+
+[data-theme="dark"] .callout-win {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+[data-theme="dark"] .callout-place {
+    background: rgba(212, 160, 23, 0.1);
+}
+
+[data-theme="dark"] .callout-dark {
+    background: rgba(192, 57, 43, 0.1);
+}
+
+[data-theme="dark"] .callout-info {
+    background: rgba(41, 128, 185, 0.1);
+}
+
+/* --- 目次改善 --- */
+.toc {
+    background: var(--color-turf-light);
+    border: 1px solid rgba(13, 104, 50, 0.15);
+    border-radius: var(--radius);
+}
+
+[data-theme="dark"] .toc {
+    background: rgba(76, 175, 80, 0.06);
+    border-color: rgba(76, 175, 80, 0.15);
+}
+
+/* --- 引用ブロック --- */
+.post-content blockquote {
+    border-left: 4px solid var(--color-gold);
+    background: var(--color-gold-light);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 4px 4px 0;
+}
+
+[data-theme="dark"] .post-content blockquote {
+    background: rgba(212, 160, 23, 0.08);
+}
