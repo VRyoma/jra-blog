@@ -1,0 +1,54 @@
+baseURL = "https://your-site.pages.dev"
+languageCode = "ja"
+title = "JRA重賞予想ブログ"
+theme = "PaperMod"
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "りょうま"
+  description = "毎週金曜日に自動生成されるJRA重賞レース予想ブログ"
+  defaultTheme = "auto"
+  DateFormat = "2006年1月2日"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  homeInfoParams = { Title = "🏇 JRA重賞予想ブログ", Content = "毎週金曜日、AIが土日の重賞レースを自動予想。G1・G2・G3の全重賞をカバーします。" }
+
+  [params.assets]
+    favicon = "/images/favicon.ico"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "ホーム"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "予想一覧"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "タグ"
+    url = "/tags/"
+    weight = 30
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
